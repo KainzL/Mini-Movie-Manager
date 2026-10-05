@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app.light {
+  background: #ffffff;
+  color: #000000;
+}
+
+.app.dark {
+  background: #222222;
+  color: #ffffff;
+}
+
+.container {
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+  border: 1px solid #888;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #888;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+
+.search-form,
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-form input {
+  flex: 1;
+}
+
+.toolbar select {
+  flex: 1;
+}
+
+.stats {
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+  padding: 8px 0;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.movie-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  border-bottom: 1px solid #888;
+}
+
+.movie-item.selected {
+  background: rgba(136, 136, 136, 0.25);
+}
+
+.movie-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.movie-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.movie-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star {
+  border: none;
+  background: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #888;
+  padding: 0;
+}
+
+.star.active {
+  color: #f5b301;
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie-meta {
+  font-size: 14px;
+  text-align: right;
+}
+
+.detail-box {
+  width: 300px;
+  flex-shrink: 0;
+  border: 1px solid #888;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.detail-heading {
+  font-size: 20px;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #888;
+}
+
+.detail-box h3 {
+  margin-top: 0;
+}
+
+.detail-box p {
+  margin: 6px 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container {
+    max-width: none;
+  }
+
+  .detail-box {
+    width: 100%;
+  }
+}
+
+.empty {
+  text-align: center;
+}
